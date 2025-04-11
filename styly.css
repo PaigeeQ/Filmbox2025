@@ -115,3 +115,29 @@ video[controls] + .player-controls {
 .form-control.is-invalid {
 	margin-bottom: 0;
 }
+
+
+.filmKarta {
+	border: 1px solid #ccc;   /* Okraje karet */
+	padding: 20px;             /* Vnitřní okraje karty */
+	margin: 10px;              /* Vzdálenost mezi kartami */
+	width: 300px;              /* Fixní šířka karty */
+	display: inline-block;     /* Zobrazíme karty vedle sebe */
+	text-align: center;        /* Text bude centrován */
+	background-color: #f4f4f4; /* Světle šedé pozadí */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Stín pro karty */
+  }
+  
+  .filmKarta img {
+	width: 100%;               /* Obrázky budou mít šířku karty */
+	height: auto;              /* Výška se přizpůsobí šířce */
+	max-width: 100%;           /* Aby obrázky nevyčnívaly z karty */
+  }
+  
+  /* Přidáme margin pro seznam filmů, aby nebyl těsně u okrajů */
+  #seznam-filmu {
+	display: flex;
+	flex-wrap: wrap;           /* Karty se budou lámat do řad */
+	justify-content: space-around; /* Karty budou rovnoměrně rozmístěny */
+	padding: 20px;
+  }

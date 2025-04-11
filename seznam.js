@@ -1,3 +1,5 @@
+
+
 const filmy = [
 	{
 		id: 'pelisky',
@@ -104,3 +106,25 @@ const filmy = [
 		premiera: '2022-12-24',
 	},
 ]
+document.addEventListener("DOMContentLoaded", () => { 
+    const seznamFilmu = document.querySelector("#seznam-filmu");
+    seznamFilmu.innerHTML = "";
+    
+    filmy.forEach((film) => {
+    const filmKarta = document.createElement("div");
+    filmKarta.classList.add("filmKarta");
+	console.log(film); 
+
+    filmKarta.innerHTML = `
+            <h2>${film.nazev}</h2>
+            <img src=${film.plakat.url} alt="plakát" width=${film.plakat.sirka} height=${film.plakat.vyska}>
+            <p><strong>Ochutnávka: ${film.ochutnavka}</strong></p>
+			<a href="film.html#${film.id}" class="btn btn-primary">Přehrát</a>
+        `;
+
+        seznamFilmu.appendChild(filmKarta);
+    });
+});
+
+
+
